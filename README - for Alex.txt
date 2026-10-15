@@ -112,7 +112,7 @@ UPDATES (from anywhere, through GitHub: github.com/alexguybosse/pod-renamer)
     - New version crashes on start: the previous one is put back automatically, and that
       version number is never installed again (raise the number to try again).
     - New version needs another Python package (REQUIRES near the top): it doesn't install;
-      she sees "needs Alex to run SETUP once". Run SETUP on her PC to finish.
+      the user sees "whoever set it up needs to run SETUP". Run SETUP on that PC.
     - Log: %APPDATA%\POD Renamer\update-log.txt     Backup: pod_renamer.py.previous
     - To stop updates on a PC: add  "auto_update": false  to settings.json.
 

@@ -7,7 +7,7 @@ Renames scanned Proofs of Delivery (PODs) to their invoice numbers. It reads eac
 2. In the unzipped folder, double-click **`SETUP - double-click me first.bat`**. If Windows warns you, click *More info → Run anyway*.
 3. Double-click **Rename PODs** on the desktop and choose the folder the scans arrive in.
 
-After setup, the downloaded folder can be deleted. `How to use - for Mom.pdf` is a one-page guide to print.
+After setup, the downloaded folder can be deleted. `How to use POD Renamer.pdf` is a one-page guide to print for the people using it.
 
 ## Updates
 Every installed copy checks `version.txt` here each time it opens. If the number is higher than its own, it downloads the new `pod_renamer.py` and restarts into it.

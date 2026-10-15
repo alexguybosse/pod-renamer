@@ -32,7 +32,7 @@ import time
 import traceback
 
 APP = "POD Renamer"
-VERSION = "1.1.0"         # raise this (and version.txt on GitHub) to send an update to every PC
+VERSION = "1.1.1"         # raise this (and version.txt on GitHub) to send an update to every PC
 END_MARK = "# ---- end of POD Renamer ----"   # must stay the very last line of this file
 UPDATE_BASE = "https://raw.githubusercontent.com/alexguybosse/pod-renamer/main/"
 REQUIRES = ["pymupdf", "PIL"]  # an update that needs more than this waits until SETUP is run again
@@ -1402,8 +1402,8 @@ def run_app():
             if st.get("needs_setup") and st.get("told_setup") != st["needs_setup"]:
                 st["told_setup"] = st["needs_setup"]
                 _save_update_state(st)
-                messagebox.showinfo(APP, "There is a new version of POD Renamer, but it needs Alex to run\n"
-                                         "SETUP on this computer once.\n\nEverything still works as before.")
+                messagebox.showinfo(APP, "There is a new version of POD Renamer, but whoever set it up\n"
+                                         "needs to run SETUP on this computer once.\n\nEverything still works as before.")
             fixed = repair_wrong_combines(self.settings)
             if fixed:
                 messagebox.showinfo(APP, "Some scans were joined together by mistake in the previous version:\n\n"
@@ -2159,7 +2159,7 @@ if __name__ == "__main__":
                 try:
                     import tkinter.messagebox as mb
                     mb.showinfo(APP, "The latest update had a problem, so the previous version\n"
-                                     "has been put back. Please let Alex know.")
+                                     "has been put back. Please let whoever set up POD Renamer know.")
                 except Exception:
                     pass
                 _restart()
