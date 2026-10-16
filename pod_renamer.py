@@ -32,7 +32,8 @@ import time
 import traceback
 
 APP = "POD Renamer"
-VERSION = "1.1.1"         # raise this (and version.txt on GitHub) to send an update to every PC
+MADE_FOR = "ADE Agencies"  # shown in small print next to the name at the top
+VERSION = "1.1.2"         # raise this (and version.txt on GitHub) to send an update to every PC
 END_MARK = "# ---- end of POD Renamer ----"   # must stay the very last line of this file
 UPDATE_BASE = "https://raw.githubusercontent.com/alexguybosse/pod-renamer/main/"
 REQUIRES = ["pymupdf", "PIL"]  # an update that needs more than this waits until SETUP is run again
@@ -1266,6 +1267,9 @@ def run_app():
             top = tk.Frame(self, bg=BG)
             top.pack(fill="x", padx=16, pady=(12, 6))
             tk.Label(top, text="POD Renamer", font=(UI, 18, "bold"), bg=BG, fg=INK).pack(side="left")
+            if MADE_FOR:
+                tk.Label(top, text=f"made for {MADE_FOR}", font=(UI, 9), bg=BG, fg=MUTED).pack(
+                    side="left", anchor="s", padx=(8, 0), pady=(0, 4))
             self.progress = tk.Label(top, text="", font=(UI, 13), bg=BG, fg=MUTED)
             self.progress.pack(side="left", padx=20)
             self.flash_lbl = tk.Label(top, text="", font=(UI, 12, "bold"), bg=BG, fg=GREEN)
