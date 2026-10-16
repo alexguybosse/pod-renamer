@@ -33,7 +33,8 @@ import traceback
 
 APP = "POD Renamer"
 MADE_FOR = "ADE Agencies"  # shown in the window title, after the version
-VERSION = "1.1.4"         # raise this (and version.txt on GitHub) to send an update to every PC
+HELP_CONTACT = "Contact Alex at alexguybosse@gmail.com for help"  # also in the window title
+VERSION = "1.1.5"         # raise this (and version.txt on GitHub) to send an update to every PC
 END_MARK = "# ---- end of POD Renamer ----"   # must stay the very last line of this file
 UPDATE_BASE = "https://raw.githubusercontent.com/alexguybosse/pod-renamer/main/"
 REQUIRES = ["pymupdf", "PIL"]  # an update that needs more than this waits until SETUP is run again
@@ -1220,7 +1221,8 @@ def run_app():
     class App(tk.Tk):
         def __init__(self):
             super().__init__()
-            self.title(f"{APP}   ·   version {VERSION}" + (f"   ·   Made for {MADE_FOR}" if MADE_FOR else ""))
+            self.title(f"{APP}   ·   version {VERSION}" + (f"   ·   Made for {MADE_FOR}" if MADE_FOR else "")
+                       + (f"   ·   {HELP_CONTACT}" if HELP_CONTACT else ""))
             self.after(5000, update_started_ok)
             self.configure(bg=BG)
             self.minsize(1000, 640)
