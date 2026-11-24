@@ -32,8 +32,8 @@ import time
 import traceback
 
 APP = "POD Renamer"
-MADE_FOR = "ADE Agencies"  # shown in the window title, after the version
-VERSION = "1.1.6"         # raise this (and version.txt on GitHub) to send an update to every PC
+MADE_FOR = "ADE Agencies™"  # shown in the window title, after the version
+VERSION = "1.1.7"         # raise this (and version.txt on GitHub) to send an update to every PC
 END_MARK = "# ---- end of POD Renamer ----"   # must stay the very last line of this file
 UPDATE_BASE = "https://raw.githubusercontent.com/alexguybosse/pod-renamer/main/"
 REQUIRES = ["pymupdf", "PIL"]  # an update that needs more than this waits until SETUP is run again
